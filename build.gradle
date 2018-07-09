@@ -1,0 +1,10 @@
+
+task deployLua(type: Copy) {
+    from 'lua/remix'
+    into 'mame199/plugins/remix'
+}
+
+task play(type:Exec, dependsOn: deployLua) {
+    workingDir 'mame199'
+    commandLine 'mame199\\mame64.exe', 'dkong', '-window', '-script', 'plugins\\remix\\autoboot.lua', '-state', '1'
+}

@@ -1,0 +1,10 @@
+{
+  "plugin": {
+	"name": "remix",
+	"description": "remix plugin",
+	"version": "0.0.2",
+	"author": "Kyle",
+	"type": "plugin",
+	"start": "false"
+  }
+}
