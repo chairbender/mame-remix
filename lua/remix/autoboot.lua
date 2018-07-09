@@ -63,7 +63,7 @@ local function tick()
     last_tick_time = emu.time()
 
     local status = minigame()
-    print("minigame done")
+    print("minigame done ")
 
     if (status == common.MINIGAME_STATE.FAIL or status == common.MINIGAME_STATE.SUCCESS) then
         finish(status)
