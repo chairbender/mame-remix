@@ -6,12 +6,10 @@ common = require 'remix.game.common'
 local game = {}
 
 local score = function()
-    print("calling score")
     return common.bcd2dec(3, 0x60B2)
 end
 
 local lives = function()
-    print("calling lives")
     return common.memory():read_u8(0x6040)
 end
 

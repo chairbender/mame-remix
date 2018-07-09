@@ -19,15 +19,12 @@ common.bcd2dec = function(width, address, addr_space)
     if (addr_space == nil) then
         addr_space = common.memory()
     end
-    print("calling bcd2dec")
     bytes = {}
-    print("entering loop")
     for byte_address = address, address + (width - 1) do
         byte = addr_space:read_u8(byte_address)
         bytes[#bytes + 1] = byte & 0x0F
         bytes[#bytes + 1] = (byte & 0xF0) >> 4
     end
-    print("ending loop")
 
     total = 0
     for index, value in ipairs(bytes) do
