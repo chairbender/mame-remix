@@ -24,4 +24,17 @@ game.jump5 = function()
     end
 end
 
+--- TODO: Clear the barrels without dying.
+game.jump_double = function()
+    if (lives() < 3) then
+        return common.MINIGAME_STATE.FAIL
+    elseif (score() >= 600) then
+        return common.MINIGAME_STATE.SUCCESS
+    else
+        return common.MINIGAME_STATE.INCOMPLETE
+    end
+end
+
+
+
 return game
